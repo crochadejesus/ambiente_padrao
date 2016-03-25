@@ -95,3 +95,13 @@ libreoffice-java-common libreoffice-l10n-pt-br libreoffice-math \
 libreoffice-report-builder-bin libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb \
 libreoffice-style-galaxy libreoffice-style-tango libreoffice-writer -y
 ```
+
+Abaixar última versão do LibreOffice do site oficial https://wwww.libreoffice.org/.
+Tanto o main installer quanto a interface translated português (Brasil).
+
+```
+$ cd ~/Downloads
+$ tar xvzf LibreOffice_5.1.1_Linux_x86-64_deb.tar.gz
+$ cd LibreOffice_5.1.1.3_Linux_x86-64_deb/DEBS
+$ sudo dpkg -i *
+```
