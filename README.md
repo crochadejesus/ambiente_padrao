@@ -27,7 +27,7 @@ dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
 git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
 emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
 libasan1 make gcc g++-4.9 autoconf libtool automake build-essential \
-gettext libgdiplus -y
+gettext libgdiplus bluefish bluefish-plugins -y
 ```
 
 ## Mono
