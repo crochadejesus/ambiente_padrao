@@ -5,19 +5,29 @@ $ sudo aptitude install msmtp-mta evince-gtk eric -y libav-tools libavcodec-extr
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
-geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-gendoc geany-plugin-geniuspaste geany-plugin-git-changebar \
-geany-plugin-gproject geany-plugin-insertnum geany-plugin-latex geany-plugin-lipsum geany-plugin-lua geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript \
-geany-plugin-multiterm geany-plugin-numberedbookmarks geany-plugin-overview geany-plugin-pairtaghighlighter geany-plugin-pg geany-plugin-pohelper geany-plugin-prettyprinter \
-geany-plugin-prj geany-plugin-projectorganizer geany-plugin-py geany-plugin-scope geany-plugin-sendmail geany-plugin-shiftcolumn geany-plugin-spellcheck geany-plugin-tableconvert \
-geany-plugin-treebrowser geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper geany-plugin-xmlsnippets geany-plugins geany-plugins-common \
-python3-virtualenv python python-gtk2 python-zope.interface python-psycopg2 python-imaging \
-python-reportlab postgresql postgresql-client postgresql-contrib python-dateutil python-mako python-gudev \
-python-poppler python-webkit python-twisted-core python-twisted-web librsvg2-common python-xlwt \
-gettext intltool git git-review python-setuptools pep8 pyflakes python-mock pylint python-storm \
-python2.7 python-setuptools python-genshi postgresql-9.4 python-psycopg2 git apache2 libapache2-mod-wsgi \
-libapache2-mod-python docutils python-pygments python-babel python-tz pgadmin3 dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code git git-all git-completion git-el \
-emacs24 emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils libasan1 make gcc g++-4.9 autoconf libtool automake build-essential mono-devel gettext libgdiplus \
-xsltproc -y
+geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-gendoc \
+geany-plugin-geniuspaste geany-plugin-git-changebar geany-plugin-gproject \
+geany-plugin-insertnum geany-plugin-latex geany-plugin-lipsum geany-plugin-lua \
+geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript \
+geany-plugin-multiterm geany-plugin-numberedbookmarks geany-plugin-overview \
+geany-plugin-pairtaghighlighter geany-plugin-pg geany-plugin-pohelper \
+geany-plugin-prettyprinter geany-plugin-prj geany-plugin-projectorganizer \
+geany-plugin-py geany-plugin-scope geany-plugin-sendmail geany-plugin-shiftcolumn \
+geany-plugin-spellcheck geany-plugin-tableconvert geany-plugin-treebrowser \
+geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
+geany-plugin-xmlsnippets geany-plugins geany-plugins-common python3-virtualenv \
+python python-gtk2 python-zope.interface python-psycopg2 python-imaging \
+python-reportlab postgresql postgresql-client postgresql-contrib python-dateutil \
+python-mako python-gudev python-poppler python-webkit python-twisted-core \
+python-setuptools pep8 pyflakes python-mock python-twisted-web librsvg2-common \
+python-xlwt pylint python-storm python2.7 python-setuptools python-genshi \
+python-pygments python-babel python-tz python-psycopg2 postgresql-9.4 apache2 \
+libapache2-mod-wsgi libapache2-mod-python docutils pgadmin3 dia dia-common \
+dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
+git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
+emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
+libasan1 make gcc g++-4.9 autoconf libtool automake build-essential \
+gettext libgdiplus -y
 ```
 
 ## Mono
@@ -70,7 +80,8 @@ $ sudo make install
 
 ## Bower, Yeoman, Grunt, Gulp e varios geradores
 ```
-$ npm install -g grunt-cli gulp-cli bower yo generator-karma generator-angular generator-webapp generator-aspnet generator-bootstrap
+$ npm install -g grunt-cli gulp-cli bower yo generator-karma generator-angular \
+generator-webapp generator-aspnet generator-bootstrap
 ```
 
 ## LibreOffice
