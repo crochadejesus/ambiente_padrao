@@ -1,7 +1,7 @@
 # Configuração padrão de um Debian
 
 ```
-$ sudo aptitude install msmtp-mta evince-gtk eric -y libav-tools libavcodec-extra-56 \
+$ sudo aptitude install msmtp-mta evince-gtk libav-tools libavcodec-extra-56 \
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
@@ -27,7 +27,7 @@ dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
 git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
 emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
 libasan1 make gcc g++-4.9 autoconf libtool automake build-essential \
-gettext libgdiplus bluefish bluefish-plugins -y
+gettext libgdiplus bluefish bluefish-plugins wicd -y
 ```
 
 ## Mono
