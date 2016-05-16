@@ -1,7 +1,6 @@
-# Configuração padrão de um Debian
-
 # Source.list
 
+```
 deb http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
 deb-src http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
 deb http://sft.if.usp.br/debian/ jessie main non-free contrib
@@ -21,7 +20,9 @@ deb http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
 deb-src http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
 deb http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
 deb-src http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
+```
 
+# Configuração padrão de um Debian
 
 ```
 $ sudo aptitude install msmtp-mta evince-gtk eric libav-tools libavcodec-extra-56 \
