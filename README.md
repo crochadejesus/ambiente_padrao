@@ -1,5 +1,28 @@
 # Configuração padrão de um Debian
 
+# Source.list
+
+deb http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
+deb-src http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
+deb http://sft.if.usp.br/debian/ jessie main non-free contrib
+deb-src http://sft.if.usp.br/debian/ jessie main non-free contrib
+
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+# jessie-updates, previously known as 'volatile'
+deb http://debian.pop-sc.rnp.br/debian/ jessie-updates main contrib non-free
+deb-src http://debian.pop-sc.rnp.br/debian/ jessie-updates main contrib non-free
+deb http://sft.if.usp.br/debian/ jessie-updates main contrib non-free
+deb-src http://sft.if.usp.br/debian/ jessie-updates main contrib non-free
+
+# jessie-backports, previously on backports.debian.org
+deb http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
+deb-src http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
+deb http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
+deb-src http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
+
+
 ```
 $ sudo aptitude install msmtp-mta evince-gtk eric libav-tools libavcodec-extra-56 \
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
@@ -51,8 +74,8 @@ monodoc-newtonsoft-json-manual monodoc-nunit-manual -y
 
 ## Monodevelop
 ```
-$ sudo aptitude install libglib2.0-ci libglib2.0-cil-dev gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev referenceassemblies-pcl
-$ cd ~/Workspace/fontes/
+$ sudo aptitude install libglib2.0-ci libglib2.0-cil-dev gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev referenceassemblies-pcl -y
+$ cd ~/Workspace/fontes/dotnet
 $ git clone https://github.com/mono/monodevelop.git
 $ cd monodevelop
 $ git submodule update --init --recursive
