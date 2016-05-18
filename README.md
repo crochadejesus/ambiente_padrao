@@ -1,5 +1,4 @@
 # Source.list
-
 ```
 deb http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
 deb-src http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
@@ -23,7 +22,6 @@ deb-src http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
 ```
 
 # Configuração padrão de um Debian
-
 ```
 $ sudo aptitude install msmtp-mta evince-gtk eric libav-tools libavcodec-extra-56 \
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
@@ -52,7 +50,7 @@ git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
 emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
 libasan1 make gcc g++-4.9 autoconf libtool automake build-essential \
 gettext libgdiplus bluefish bluefish-plugins gksu libgksu2-0 libgtop2-7 libgtop2-common \
-python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk -y
+python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk curl ttf-mscorefonts-installer -y
 ```
 
 ## Mono
@@ -80,33 +78,38 @@ $ cd ~/Workspace/fontes/dotnet
 $ git clone https://github.com/mono/monodevelop.git
 $ cd monodevelop
 $ git submodule update --init --recursive
-```
 
-## Java
+$ cd ~/Workspace/fontes/dotnet/monodevelop
+$ git tag // Comando para ver as últimas tags criadas
+$ git checkout monodevelop-6.1.0.817
+$ ./configure --profile=stable
+$ make
+$ sudo make install
 ```
-$ apt-get --install-recommends install java-package
-$ http://www.oracle.com/technetwork/java/javase/downloads/
-$ make-jpkg jre-8u73-linux-x64.tar.gz
-$ sudo dpkg -i oracle-java8-jre_8u73_amd64.deb
-```
-Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instalacao-do-Java-da-Oracle-em-distros-Debian-like/)
-
 
 ## NodeJS
 ```
 $ cd ~/Workspace/fontes/
 $ git clone https://github.com/nodejs/node.git
 $ cd node
-$ git checkout v5.9.0
+$ git tag // Comando para ver as últimas tags criadas
+$ git checkout v6.1.0
 $ ./configure
 $ make
 $ sudo make install
 ```
 
-## Bower, Yeoman, Grunt, Gulp e varios geradores
+## Bower, Grunt, Gulp, Yeoman e varios geradores
 ```
-$ npm install -g grunt-cli gulp-cli bower yo generator-karma generator-angular \
-generator-webapp generator-aspnet generator-bootstrap
+$ sudo npm install -g grunt-cli gulp-cli bower yosay yeoman-environment yeoman-doctor yeoman-character user-home \
+update-notifier titleize tabtab string-length sort-on root-check repeating read-pkg-up parse-help package-json opn \
+npm-keyword meow lodash insight inquirer humanize-string got fullname figures cross-spawn-async configstore cli-list chalk \
+async twig supports-color glob yo generator-karma generator-angular generator-webapp generator-aspnet generator-bootstrap
+```
+Se não conseguir instalar o yo de forma alguma com os comandos acima tente executar
+```
+$ sudo npm install n -g
+$ sudo n stable
 ```
 
 ## LibreOffice
@@ -121,7 +124,8 @@ libreoffice-report-builder-bin libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb
 libreoffice-style-galaxy libreoffice-style-tango libreoffice-writer -y
 ```
 
-Abaixar última versão do LibreOffice do site oficial https://wwww.libreoffice.org/.
+Abaixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
+Abaixar o torrent que é mais rápido, usar a extensão Torrent Tornado do Firefox.
 Tanto o main installer quanto a interface translated português (Brasil).
 
 ```
@@ -129,4 +133,23 @@ $ cd ~/Downloads
 $ tar xvzf LibreOffice_5.1.1_Linux_x86-64_deb.tar.gz
 $ cd LibreOffice_5.1.1.3_Linux_x86-64_deb/DEBS
 $ sudo dpkg -i *
+```
+
+## Java
+Acessar o site http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html para abaixar uma versão do JRE.
+```
+$ sudo apt-get --install-recommends install java-package
+$ cd ~/Downloads/java
+$ make-jpkg jre-8u92-linux-x64.tar.gz
+$ sudo dpkg -i oracle-java8-jre_8u92_amd64.deb
+```
+Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instalacao-do-Java-da-Oracle-em-distros-Debian-like/)
+
+
+## IRPF
+```
+$ chmod +x IRPF2016Linux-x86_64v1.2.bin
+$ chmod +x Receitanet-1.07-x64.bin
+$ ./IRPF2016Linux-x86_64v1.2.bin
+$ ./Receitanet-1.07-x64.bin
 ```
