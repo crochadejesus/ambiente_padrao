@@ -1,24 +1,25 @@
 # Source.list
 ```
-deb http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
-deb-src http://debian.pop-sc.rnp.br/debian/ jessie main non-free contrib
-deb http://sft.if.usp.br/debian/ jessie main non-free contrib
-deb-src http://sft.if.usp.br/debian/ jessie main non-free contrib
+deb http://linorg.usp.br/debian/ jessie main non-free contrib
+deb-src http://linorg.usp.br/debian/ jessie main non-free contrib
+deb http://mirror.rit.edu/debian/ jessie main non-free contrib
+deb-src http://mirror.rit.edu/debian/ jessie main non-free contrib
 
+# security
 deb http://security.debian.org/ jessie/updates main contrib non-free
 deb-src http://security.debian.org/ jessie/updates main contrib non-free
 
 # jessie-updates, previously known as 'volatile'
-deb http://debian.pop-sc.rnp.br/debian/ jessie-updates main contrib non-free
-deb-src http://debian.pop-sc.rnp.br/debian/ jessie-updates main contrib non-free
-deb http://sft.if.usp.br/debian/ jessie-updates main contrib non-free
-deb-src http://sft.if.usp.br/debian/ jessie-updates main contrib non-free
+deb http://linorg.usp.br/debian/ jessie-updates main contrib non-free
+deb-src http://linorg.usp.br/debian/ jessie-updates main contrib non-free
+deb http://mirror.rit.edu/debian/ jessie-updates main contrib non-free
+deb-src http://mirror.rit.edu/debian/ jessie-updates main contrib non-free
 
 # jessie-backports, previously on backports.debian.org
-deb http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
-deb-src http://debian.pop-sc.rnp.br/debian/ jessie-backports main contrib non-free
-deb http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
-deb-src http://sft.if.usp.br/debian/ jessie-backports main contrib non-free
+deb http://linorg.usp.br/debian/ jessie-backports main contrib non-free
+deb-src http://linorg.usp.br/debian/ jessie-backports main contrib non-free
+deb http://mirror.rit.edu/debian/ jessie-backports main contrib non-free
+deb-src http://mirror.rit.edu/debian/ jessie-backports main contrib non-free
 ```
 
 # Configuração padrão de um Debian
