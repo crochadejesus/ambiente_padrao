@@ -48,7 +48,7 @@ libapache2-mod-wsgi libapache2-mod-python docutils pgadmin3 dia dia-common \
 dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
 git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
 emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
-libasan1 make gcc g++-4.9 autoconf libtool automake build-essential \
+libasan1 make gcc g++-4.9 autoconf libtool automake build-essential libgnome-keyring-dev fakeroot\
 gettext libgdiplus bluefish bluefish-plugins gksu libgksu2-0 libgtop2-7 libgtop2-common \
 python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk curl ttf-mscorefonts-installer -y
 ```
