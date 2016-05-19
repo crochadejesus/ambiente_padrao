@@ -24,7 +24,7 @@ deb-src http://mirror.rit.edu/debian/ jessie-backports main contrib non-free
 
 # Configuração padrão de um Debian
 ```
-$ sudo aptitude install msmtp-mta evince-gtk eric libav-tools libavcodec-extra-56 \
+$ sudo aptitude install msmtp-mta evince-gtk libav-tools libavcodec-extra-56 \
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
