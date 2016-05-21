@@ -38,12 +38,12 @@ geany-plugin-prettyprinter geany-plugin-prj geany-plugin-projectorganizer \
 geany-plugin-py geany-plugin-scope geany-plugin-sendmail geany-plugin-shiftcolumn \
 geany-plugin-spellcheck geany-plugin-tableconvert geany-plugin-treebrowser \
 geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
-geany-plugin-xmlsnippets geany-plugins geany-plugins-common python3-virtualenv \
+geany-plugin-xmlsnippets geany-plugins geany-plugins-common virtualenv python3-virtualenv \
 python python-gtk2 python-zope.interface python-psycopg2 python-imaging \
 python-reportlab postgresql postgresql-client postgresql-contrib python-dateutil \
 python-mako python-gudev python-poppler python-webkit python-twisted-core \
 python-setuptools pep8 pyflakes python-mock python-twisted-web librsvg2-common \
-python-xlwt pylint python-storm python2.7 python-setuptools python-genshi \
+python-xlwt pylint python-storm python2.7 python3 python-setuptools python-genshi \
 python-pygments python-babel python-tz python-psycopg2 postgresql-9.4 apache2 \
 libapache2-mod-wsgi libapache2-mod-python docutils pgadmin3 dia dia-common \
 dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
