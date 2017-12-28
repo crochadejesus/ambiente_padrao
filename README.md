@@ -153,15 +153,6 @@ $ chmod +x IRPF2016Linux-x86_64v1.2.bin
 $ chmod +x Receitanet-1.07-x64.bin
 $ ./IRPF2016Linux-x86_64v1.2.bin
 $ ./Receitanet-1.07-x64.bin
-```
 
-## Atom
-```
-$ git clone https://github.com/atom/atom
-$ cd atom
-$ git fetch -p
-$ git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
-$ script/build
-$ sudo script/grunt install
 ```
 
