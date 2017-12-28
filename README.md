@@ -1,25 +1,21 @@
 # Source.list
 ```
-deb http://linorg.usp.br/debian/ jessie main non-free contrib
-deb-src http://linorg.usp.br/debian/ jessie main non-free contrib
-deb http://mirror.rit.edu/debian/ jessie main non-free contrib
-deb-src http://mirror.rit.edu/debian/ jessie main non-free contrib
+deb http://deb.debian.org/debian/ stretch main non-free contrib
+deb-src http://deb.debian.org/debian/ stretch main non-free contrib
 
-# security
-deb http://security.debian.org/ jessie/updates main contrib non-free
-deb-src http://security.debian.org/ jessie/updates main contrib non-free
+deb http://deb.debian.org/security/ stretch/updates main contrib non-free
 
-# jessie-updates, previously known as 'volatile'
-deb http://linorg.usp.br/debian/ jessie-updates main contrib non-free
-deb-src http://linorg.usp.br/debian/ jessie-updates main contrib non-free
-deb http://mirror.rit.edu/debian/ jessie-updates main contrib non-free
-deb-src http://mirror.rit.edu/debian/ jessie-updates main contrib non-free
+deb http://security.debian.org/debian-security stretch/updates main contrib non-free
+deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
 
-# jessie-backports, previously on backports.debian.org
-deb http://linorg.usp.br/debian/ jessie-backports main contrib non-free
-deb-src http://linorg.usp.br/debian/ jessie-backports main contrib non-free
-deb http://mirror.rit.edu/debian/ jessie-backports main contrib non-free
-deb-src http://mirror.rit.edu/debian/ jessie-backports main contrib non-free
+# stretch-updates, previously known as 'volatile'
+deb http://deb.debian.org/debian/ stretch-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ stretch-updates main contrib non-free
+
+# stretch-backports, previously on backports.debian.org
+deb http://deb.debian.org/debian/ stretch-backports main contrib non-free
+deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
+
 ```
 
 # Configuração padrão de um Debian
@@ -47,10 +43,9 @@ python-xlwt pylint python-storm python2.7 python3 python-setuptools python-gensh
 python-pygments python-babel python-tz python-psycopg2 postgresql-9.4 apache2 \
 libapache2-mod-wsgi libapache2-mod-python docutils pgadmin3 dia dia-common \
 dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
-git git-all git-completion git-el git-review xsltproc kdiff3 emacs24 \
-emacs24-bin-common emacs24-common chromium chromium-l10n cmake binutils \
+git git-all git-completion git-el git-review xsltproc kdiff3 cmake binutils \
 libasan1 make gcc g++-4.9 autoconf libtool automake build-essential libgnome-keyring-dev fakeroot\
-gettext libgdiplus bluefish bluefish-plugins gksu libgksu2-0 libgtop2-7 libgtop2-common \
+gettext libgdiplus gksu libgksu2-0 libgtop2-7 libgtop2-common \
 python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk curl ttf-mscorefonts-installer -y
 ```
 
