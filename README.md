@@ -20,7 +20,7 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 
 # Configuração padrão de um Debian
 ```
-$ sudo aptitude install msmtp-mta evince-gtk libav-tools libavcodec-extra-56 \
+$ sudo apt-get install msmtp-mta evince-gtk libav-tools libavcodec-extra-56 \
 libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
@@ -54,26 +54,12 @@ python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk curl tt
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 echo "deb http://download.mono-project.com/repo/debian stretch main" | sudo tee /etc/apt/sources.list.d/mono-official.list
 sudo apt-get update
-
-$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-$ echo "deb http://download.mono-project.com/repo/debian wheezy main" | sudo tee /etc/apt/sources.list.d/mono-xamarin.list
-$ echo "deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main" | sudo tee -a /etc/apt/sources.list.d/mono-xamarin.list
-$ echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-compat main" | sudo tee -a /etc/apt/sources.list.d/mono-xamarin.list
-$ echo "deb http://download.mono-project.com/repo/debian wheezy-libtiff-compat main" | sudo tee -a /etc/apt/sources.list.d/mono-xamarin.list
-$ sudo apt-get update
-$ sudo aptitude install mono-4.0-gac mono-4.0-service mono-addins-utils \
-mono-apache-server4 mono-basic-dbg mono-complete mono-csharp-shell mono-dbg \
-mono-devel mono-dmcs mono-fastcgi-server4 mono-fpm-server mono-gac mono-gmcs  \
-mono-mcs mono-profiler mono-runtime mono-runtime-common mono-runtime-dbg \
-mono-runtime-sgen  mono-tools-devel mono-tools-gui mono-utils mono-xbuild \
-mono-xsp mono-xsp4 mono-xsp4-base mono-tools-devel mono-tools-gui \
-monodoc-gtk3.0-manual monodoc-gtk2.0-manual monodoc-hexbox-manual monodoc-http \
-monodoc-newtonsoft-json-manual monodoc-nunit-manual -y
+sudo apt-get install mono-devel mono-complete mono-dbg mono-xsp4 referenceassemblies-pcl
 ```
 
 ## Monodevelop
 ```
-$ sudo aptitude install libglib2.0-ci libglib2.0-cil-dev gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev referenceassemblies-pcl -y
+$ sudo apt-get install gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev fsharp cmake -y
 $ cd ~/Workspace/fontes/dotnet
 $ git clone https://github.com/mono/monodevelop.git
 $ cd monodevelop
@@ -81,7 +67,7 @@ $ git submodule update --init --recursive
 
 $ cd ~/Workspace/fontes/dotnet/monodevelop
 $ git tag // Comando para ver as últimas tags criadas
-$ git checkout monodevelop-6.1.0.817
+$ git checkout monodevelop-7.3.2.12
 $ ./configure --profile=stable
 $ make
 $ sudo make install
@@ -93,9 +79,9 @@ $ cd ~/Workspace/fontes/
 $ git clone https://github.com/nodejs/node.git
 $ cd node
 $ git tag // Comando para ver as últimas tags criadas
-$ git checkout v6.1.0
+$ git checkout v9.3.0
 $ ./configure
-$ make
+$ sudo make
 $ sudo make install
 ```
 
@@ -124,8 +110,8 @@ libreoffice-report-builder-bin libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb
 libreoffice-style-galaxy libreoffice-style-tango libreoffice-writer -y
 ```
 
-Abaixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
-Abaixar o torrent que é mais rápido, usar a extensão Torrent Tornado do Firefox.
+Baixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
+Baixar o torrent que é mais rápido, usar a extensão Torrent Tornado do Firefox.
 Tanto o main installer quanto a interface translated português (Brasil).
 
 ```
