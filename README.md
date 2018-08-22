@@ -23,15 +23,10 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 $ sudo apt-get install apt-transport-https msmtp-mta evince evince-common geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
-geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-gendoc \
-geany-plugin-geniuspaste geany-plugin-git-changebar geany-plugin-gproject \
-geany-plugin-insertnum geany-plugin-latex geany-plugin-lipsum geany-plugin-lua \
-geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript \
-geany-plugin-multiterm geany-plugin-numberedbookmarks geany-plugin-overview \
-geany-plugin-pairtaghighlighter geany-plugin-pg geany-plugin-pohelper \
-geany-plugin-prettyprinter geany-plugin-prj geany-plugin-projectorganizer \
-geany-plugin-py geany-plugin-scope geany-plugin-sendmail geany-plugin-shiftcolumn \
-geany-plugin-spellcheck geany-plugin-tableconvert geany-plugin-treebrowser \
+geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-git-changebar \
+geany-plugin-insertnum geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript \
+geany-plugin-numberedbookmarks geany-plugin-overview geany-plugin-shiftcolumn \
+geany-plugin-tableconvert geany-plugin-treebrowser \
 geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
 geany-plugins geany-plugins-common postgresql postgresql-client postgresql-9.4 apache2 \
 pgadmin3 dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
