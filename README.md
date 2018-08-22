@@ -20,8 +20,7 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 
 # Configuração padrão de um Debian
 ```
-$ sudo apt-get install msmtp-mta evince-gtk libav-tools libavcodec-extra-56 \
-libavformat-ffmpeg56 libavcodec-ffmpeg-extra56 geany-abi-69 geany-abi-71 geany-common \
+$ sudo apt-get install apt-transport-https msmtp-mta evince evince-common geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
 geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-gendoc \
@@ -34,19 +33,10 @@ geany-plugin-prettyprinter geany-plugin-prj geany-plugin-projectorganizer \
 geany-plugin-py geany-plugin-scope geany-plugin-sendmail geany-plugin-shiftcolumn \
 geany-plugin-spellcheck geany-plugin-tableconvert geany-plugin-treebrowser \
 geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
-geany-plugin-xmlsnippets geany-plugins geany-plugins-common virtualenv python3-virtualenv \
-python python-gtk2 python-zope.interface python-psycopg2 python-imaging \
-python-reportlab postgresql postgresql-client postgresql-contrib python-dateutil \
-python-mako python-gudev python-poppler python-webkit python-twisted-core \
-python-setuptools pep8 pyflakes python-mock python-twisted-web librsvg2-common \
-python-xlwt pylint python-storm python2.7 python3 python-setuptools python-genshi \
-python-pygments python-babel python-tz python-psycopg2 postgresql-9.4 apache2 \
-libapache2-mod-wsgi libapache2-mod-python docutils pgadmin3 dia dia-common \
-dia-gnome gettext intltool dia-libs dia-rib-network dia-shapes dia2code \
-git git-all git-completion git-el git-review xsltproc kdiff3 cmake binutils \
-libasan1 make gcc g++-4.9 autoconf libtool automake build-essential libgnome-keyring-dev fakeroot\
-gettext libgdiplus gksu libgksu2-0 libgtop2-7 libgtop2-common \
-python-glade2 python-notify python-wicd rfkill wicd wicd-daemon wicd-gtk curl ttf-mscorefonts-installer -y
+geany-plugins geany-plugins-common postgresql postgresql-client postgresql-9.4 apache2 \
+pgadmin3 dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
+git-all git-completion git-el git-review kdiff3 \
+make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer -y
 ```
 
 ## Mono
