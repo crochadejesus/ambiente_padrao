@@ -44,6 +44,13 @@ sudo apt-get install mono-devel mono-complete mono-dbg mono-xsp4 referenceassemb
 
 ## Monodevelop
 ```
+Pacotes necessários para compilar Monodevelop a partir do GitHub
+
+libglib2.0-cil  libglib2.0-cil-dev  libgtk2.0-cil  libgtk2.0-cil-dev  libwebkit1.1-cil  monodoc-base  monodoc-browser  monodoc-manual  monodoc-gtk3.0-manual  libgnome2.24-cil  libgnome2.0-cil-dev  libart2.0-cil  libart2.0-cil-dev  libgconf2.0-cil  libgnome-vfs2.0-cil  libgnome-vfs2.0-cil-dev  libgnome2.0-cil-dev  libgnome2.24-cil  libgconf2.0-cil-dev  libgcrypt20-dev  libgpg-error-dev  libssh2-1-dev  libnuget-core-cil  nuget
+
+Install de referenceassemblies-pcl
+http://download.mono-project.com/repo/debian/pool/main/r/referenceassemblies-pcl/
+
 $ sudo apt-get install gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev fsharp cmake -y
 $ cd ~/Workspace/fontes/dotnet
 $ git clone https://github.com/mono/monodevelop.git
