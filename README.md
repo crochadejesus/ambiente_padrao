@@ -44,6 +44,15 @@ sudo apt-get install mono-devel mono-complete mono-dbg mono-xsp4 referenceassemb
 
 ## Monodevelop
 ```
+Debian 9 (i386, amd64, armhf, armel)
+
+sudo apt install apt-transport-https dirmngr
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/debian vs-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
+sudo apt update
+sudo apt-get install monodevelop
+
+
 Pacotes necessários para compilar Monodevelop a partir do GitHub
 
 libglib2.0-cil  libglib2.0-cil-dev  libgtk2.0-cil  libgtk2.0-cil-dev  libwebkit1.1-cil  monodoc-base  monodoc-browser  monodoc-manual  monodoc-gtk3.0-manual  libgnome2.24-cil  libgnome2.0-cil-dev  libart2.0-cil  libart2.0-cil-dev  libgconf2.0-cil  libgnome-vfs2.0-cil  libgnome-vfs2.0-cil-dev  libgnome2.0-cil-dev  libgnome2.24-cil  libgconf2.0-cil-dev  libgcrypt20-dev  libgpg-error-dev  libssh2-1-dev  libnuget-core-cil  nuget
