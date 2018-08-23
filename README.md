@@ -30,7 +30,7 @@ geany-plugin-tableconvert geany-plugin-treebrowser \
 geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
 geany-plugins geany-plugins-common postgresql postgresql-client postgresql-9.4 apache2 \
 pgadmin3 dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
-git-all git-completion git-el git-review kdiff3 \
+git-all git-completion git-el git-review kdiff3 flatpak \
 make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer -y
 ```
 
@@ -67,14 +67,16 @@ $ sudo make install
 
 ## NodeJS
 ```
-$ cd ~/Workspace/fontes/
-$ git clone https://github.com/nodejs/node.git
-$ cd node
-$ git tag // Comando para ver as últimas tags criadas
-$ git checkout v9.3.0
-$ ./configure
-$ sudo make
-$ sudo make install
+For Node.js 10:
+
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+Optional: install build tools
+
+To compile and install native addons from npm you may also need to install build tools:
+
+sudo apt-get install -y build-essential
 ```
 
 ## Bower, Grunt, Gulp, Yeoman e varios geradores
