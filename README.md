@@ -20,33 +20,30 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 
 # Configuração padrão de um Debian
 ```
-$ sudo apt-get install apt-transport-https msmtp-mta evince evince-common geany-common \
+$ sudo apt-get install apt-transport-https dirmngr curl msmtp-mta evince evince-common geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
-geany-plugin-devhelp geany-plugin-doc geany-plugin-extrasel geany-plugin-git-changebar \
-geany-plugin-insertnum geany-plugin-macro geany-plugin-markdown geany-plugin-miniscript \
-geany-plugin-numberedbookmarks geany-plugin-overview geany-plugin-shiftcolumn \
-geany-plugin-tableconvert geany-plugin-treebrowser \
-geany-plugin-updatechecker geany-plugin-vc geany-plugin-webhelper \
-geany-plugins geany-plugins-common postgresql postgresql-client postgresql-9.4 apache2 \
-pgadmin3 dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
-git-all git-completion git-el git-review kdiff3 flatpak \
+geany-plugin-insertnum geany-plugin-macro geany-plugin-markdown libgconf-2-4 aptitude gconf2-common \
+geany-plugins geany-plugins-common dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
+git git-man git-all git-completion git-review kdiff3 flatpak openshot blender inkscape flowblade \
+liberror-perl patch rsync pkg-config erlang libicu-dev libmozjs185-dev libcurl4-openssl-dev libuv1 \
 make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer -y
 ```
 
 ## Mono
 ```
+Debian 9 (i386, amd64, armhf, armel)
+
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb http://download.mono-project.com/repo/debian stretch main" | sudo tee /etc/apt/sources.list.d/mono-official.list
-sudo apt-get update
-sudo apt-get install mono-devel mono-complete mono-dbg mono-xsp4 referenceassemblies-pcl
+echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+sudo apt install mono-devel
 ```
 
 ## Monodevelop
 ```
 Debian 9 (i386, amd64, armhf, armel)
 
-sudo apt install apt-transport-https dirmngr
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 echo "deb https://download.mono-project.com/repo/debian vs-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
 sudo apt update
@@ -80,25 +77,6 @@ For Node.js 10:
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
-Optional: install build tools
-
-To compile and install native addons from npm you may also need to install build tools:
-
-sudo apt-get install -y build-essential
-```
-
-## Bower, Grunt, Gulp, Yeoman e varios geradores
-```
-$ sudo npm install -g grunt-cli gulp-cli bower yosay yeoman-environment yeoman-doctor yeoman-character user-home \
-update-notifier titleize tabtab string-length sort-on root-check repeating read-pkg-up parse-help package-json opn \
-npm-keyword meow lodash insight inquirer humanize-string got fullname figures cross-spawn-async configstore cli-list chalk \
-async twig supports-color glob yo generator-karma generator-angular generator-webapp generator-aspnet generator-bootstrap
-```
-Se não conseguir instalar o yo de forma alguma com os comandos acima tente executar
-```
-$ sudo npm install n -g
-$ sudo n stable
 ```
 
 ## LibreOffice
@@ -119,28 +97,15 @@ Tanto o main installer quanto a interface translated português (Brasil).
 
 ```
 $ cd ~/Downloads
-$ tar xvzf LibreOffice_5.1.1_Linux_x86-64_deb.tar.gz
-$ cd LibreOffice_5.1.1.3_Linux_x86-64_deb/DEBS
+$ tar xvzf LibreOffice_6.1.2_Linux_x86-64_deb.tar.gz
+$ cd LibreOffice_6.1.2_Linux_x86-64_deb/DEBS
 $ sudo dpkg -i *
 ```
 
 ## Java
-Acessar o site http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html para abaixar uma versão do JRE.
+Acessar o site http://www.oracle.com/technetwork/java/javase/downloads/ para abaixar uma versão do JRE.
 ```
-$ sudo apt-get --install-recommends install java-package
-$ cd ~/Downloads/java
-$ make-jpkg jre-8u92-linux-x64.tar.gz
-$ sudo dpkg -i oracle-java8-jre_8u92_amd64.deb
+$ cd ~/Downloads/
+$ sudo dpkg -i jdk-11_linux-x64_bin.deb
 ```
 Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instalacao-do-Java-da-Oracle-em-distros-Debian-like/)
-
-
-## IRPF
-```
-$ chmod +x IRPF2016Linux-x86_64v1.2.bin
-$ chmod +x Receitanet-1.07-x64.bin
-$ ./IRPF2016Linux-x86_64v1.2.bin
-$ ./Receitanet-1.07-x64.bin
-
-```
-
