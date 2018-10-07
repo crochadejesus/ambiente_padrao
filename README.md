@@ -80,9 +80,36 @@ $ make
 $ sudo make install
 ```
 
+## DotNetCore
+Download the current version from official [web site] https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-current
+
+### Register Microsoft key and feed
+
+Before installing .NET, you'll need to register the Microsoft key, register the product repository, and install required dependencies. This only needs to be done once per machine.
+
+Open a command prompt and run the following commands:
+```
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
+sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
+wget -q https://packages.microsoft.com/config/debian/9/prod.list
+sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
+sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
+sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
+```
+Install .NET SDK
+
+Update the products available for installation, then install the .NET SDK.
+
+In your command prompt, run the following commands:
+```
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.1
+```
+
+
 ## NodeJS
 For Node.js 10:
-Download the source code of current version from official web site https://nodejs.org/en/download/current/
+Download the source code of current version from official [web site] https://nodejs.org/en/download/current/
 ```
 tar xvzf node-v10.11.0.tar.gz
 cd node-v10.11.0/
