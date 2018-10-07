@@ -82,14 +82,6 @@ sudo apt-get install -y nodejs
 ## LibreOffice
 ### Remover LibreOffice padrão
 ```
-$ sudo aptitude purge libreoffice libreoffice-avmedia-backend-gst \
-libreoffice-base libreoffice-base-core libreoffice-base-drivers \
-libreoffice-calc libreoffice-common libreoffice-core libreoffice-draw \
-libreoffice-gtk libreoffice-help-en-us libreoffice-impress \
-libreoffice-java-common libreoffice-l10n-pt-br libreoffice-math \
-libreoffice-report-builder-bin libreoffice-sdbc-firebird libreoffice-sdbc-hsqldb \
-libreoffice-style-galaxy libreoffice-style-tango libreoffice-writer -y
-```
 
 Baixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
 Baixar o torrent que é mais rápido, usar a extensão Torrent Tornado do Firefox.
