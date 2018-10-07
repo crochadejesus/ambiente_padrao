@@ -23,7 +23,7 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 ## Install the necessary packages
 ```
 $ sudo apt-get install apt-transport-https dirmngr curl msmtp-mta evince evince-common geany-common \
-geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
+geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav libappindicator3-1 \
 geany-plugin-commander geany-plugin-ctags geany-plugin-debugger geany-plugin-defineformat \
 geany-plugin-insertnum geany-plugin-macro geany-plugin-markdown libgconf-2-4 aptitude gconf2-common \
 geany-plugins geany-plugins-common dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
