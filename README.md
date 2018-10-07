@@ -1,4 +1,6 @@
-# Source.list
+# Set default environment
+
+## Source.list
 ```
 deb http://deb.debian.org/debian/ stretch main non-free contrib
 deb-src http://deb.debian.org/debian/ stretch main non-free contrib
@@ -18,7 +20,7 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 
 ```
 
-# Configuração padrão de um Debian
+## Configuração padrão de um Debian
 ```
 $ sudo apt-get install apt-transport-https dirmngr curl msmtp-mta evince evince-common geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
@@ -79,7 +81,7 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-## LibreOffice
+# LibreOffice
 ### Remover LibreOffice padrão
 Baixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
 Baixar o torrent que é mais rápido.
@@ -101,12 +103,11 @@ Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instal
 
 
 ## CouchDB
-
-#2.1. Installation on Unix-like systems
+## 2.1. Installation on Unix-like systems
 This manual can acessed by http://docs.couchdb.org/en/latest/install/unix.html#installation-from-source
 Download the fonts in: http://mirrors.up.pt/pub/apache/couchdb/source/2.2.0/apache-couchdb-2.2.0.tar.gz
 
-#2.1.2. Dependencies
+## 2.1.2. Dependencies
 You should have the following installed:
 ```
 Erlang OTP (>=R61B03, =<19.x)
@@ -131,7 +132,7 @@ sudo apt-get --no-install-recommends -y install \
 ```
 Be sure to update the version numbers to match your system’s available packages.
 
-#2.1.4. Installing
+## 2.1.4. Installing
 Once you have satisfied the dependencies you should run:
 ```
 tar xvzf apache-couchdb-2.2.0.tar.gz
@@ -144,7 +145,6 @@ If everything was successful you should see the following message:
 ==> configuring couchdb in rel/couchdb.config
 You have configured Apache CouchDB, time to relax. Relax.
 ```
-
 To build CouchDB you should run:
 ```
 make release
@@ -157,14 +157,15 @@ You can now copy the rel/couchdb directory anywhere on your system.
 Start CouchDB with ./bin/couchdb from within that directory.
 ```
 
-#2.1.5. User Registration and Security
+## 2.1.5. User Registration and Security
 You should create a special couchdb user for CouchDB.
 On many Unix-like systems you can run:
+```
 adduser --system \
         --shell /bin/bash \
         --group --gecos \
         "CouchDB Administrator" couchdb
-
+```
 You must make sure that:
 The user has a working POSIX shell
 The user’s home directory is wherever you have copied the release. As a recommendation, copy the rel/couchdb directory into /opt/couchdb or /home/couchdb.
@@ -172,98 +173,104 @@ You can test this by:
 Trying to log in as the couchdb user
 Running pwd and checking the present working directory
 Copy the built couchdb release to the new user’s home directory:
+```
 cp -R /path/to/couchdb/rel/couchdb /opt/couchdb
-
+```
 Change the ownership of the CouchDB directories by running:
+```
 chown -R couchdb:couchdb /opt/couchdb
-
-
+```
 Change the permission of the CouchDB directories by running:
+```
 find /opt/couchdb -type d -exec chmod 0770 {} \;
-
-
+```
 Update the permissions for your ini files:
+```
 chmod 0744 /opt/couchdb/etc/
+```
 
-
-2.1.6. First Run
+## 2.1.6. First Run
 You can start the CouchDB server by running:
+```
 sudo -i -u couchdb couchdb/bin/couchdb
-
-
+```
 This uses the sudo command to run the couchdb command as the couchdb user.
 When CouchDB starts it should eventually display the following message:
 Apache CouchDB has started, time to relax.
-
-
+```
 Relax.
 To check that everything has worked, point your web browser to:
 http://127.0.0.1:5984/_utils/index.html
-
-
+```
 From here you should verify your installation by pointing your web browser to:
-http://localhost:5984/_utils/verify_install.html
+```
+http://127.0.0.1:5984/_utils/verify_install.html
+```
 
-
-2.1.7. Running as a Daemon
+## 2.1.7. Running as a Daemon
 CouchDB no longer ships with any daemonization scripts.
 The CouchDB team recommends runit to run CouchDB persistently and reliably. According to official site:
 runit is a cross-platform Unix init scheme with service supervision, a replacement for sysvinit, and other init schemes. It runs on GNU/Linux, *BSD, MacOSX, Solaris, and can easily be adapted to other Unix operating systems.
 Configuration of runit is straightforward; if you have questions, contact the CouchDB user mailing list or IRC-channel #couchdb in FreeNode network.
 Let’s consider configuring runit on Ubuntu 16.04. The following steps should be considered only as an example. Details will vary by operating system and distribution. Check your system’s package management tools for specifics.
 Install runit:
+```
 sudo apt-get install runit
-
-
+```
 Create a directory where logs will be written:
+```
 sudo mkdir /var/log/couchdb
 sudo chown couchdb:couchdb /var/log/couchdb
-
-
+```
 Create directories that will contain runit configuration for CouchDB:
+```
 sudo mkdir /etc/sv/couchdb
 sudo mkdir /etc/sv/couchdb/log
-
-
+```
 Create /etc/sv/couchdb/log/run script:
+```
 #!/bin/sh
 exec svlogd -tt /var/log/couchdb
-
-
+```
 Basically it determines where and how exactly logs will be written. See man svlogd for more details.
 Create /etc/sv/couchdb/run:
+```
 #!/bin/sh
 export HOME=/home/couchdb
 exec 2>&1
 exec chpst -u couchdb /home/couchdb/bin/couchdb
-
-
+```
 This script determines how exactly CouchDB will be launched. Feel free to add any additional arguments and environment variables here if necessary.
 Make scripts executable:
+```
 sudo chmod u+x /etc/sv/couchdb/log/run
 sudo chmod u+x /etc/sv/couchdb/run
-
-
+```
 Then run:
+```
 sudo ln -s /etc/sv/couchdb/ /etc/service/couchdb
-
+```
 
 In a few seconds runit will discover a new symlink and start CouchDB. You can control CouchDB service like this:
+```
 sudo sv status couchdb
 sudo sv stop couchdb
 sudo sv start couchdb
-
-
+```
 Naturally now CouchDB will start automatically shortly after system starts.
 You can also configure systemd, launchd or SysV-init daemons to launch CouchDB and keep it running using standard configuration files. Consult your system documentation for more information.
 
 
-2.7.1. Single Node Setup
+## 2.7.1. Single Node Setup
 A single node CouchDB 2.0 installation is what most users will be using. It is roughly equivalent to the CouchDB 1.x-series. Note that a single-node setup obviously doesn’t take any advantage of the new scaling and fault-tolerance features in CouchDB 2.0.
-After installation and initial startup, visit Fauxton at http://127.0.0.1:5984/_utils#setup. You will be asked to set up CouchDB as a single-node instance or set up a cluster. When you click “Single-Node-Setup”, you will get asked for an admin username and password. Choose them well and remember them. You can also bind CouchDB to a public address, so it is accessible within your LAN or the public, if you are doing this on a public VM. Or, you can keep the installation private by binding only to 127.0.0.1 (localhost). The wizard then configures your admin username and password and creates the three system databases _users, _replicator and _global_changes for you.
+```
+After installation and initial startup, 
+visit Fauxton at http://127.0.0.1:5984/_utils#setup.
+```
+You will be asked to set up CouchDB as a single-node instance or set up a cluster. When you click “Single-Node-Setup”, you will get asked for an admin username and password. Choose them well and remember them. You can also bind CouchDB to a public address, so it is accessible within your LAN or the public, if you are doing this on a public VM. Or, you can keep the installation private by binding only to 127.0.0.1 (localhost). The wizard then configures your admin username and password and creates the three system databases _users, _replicator and _global_changes for you.
 Alternatively, if you don’t want to use the “Single-Node-Setup” wizard and run 2.0 as a single node with admin username and password already configured, make sure to create the three three system databases manually on startup:
+```
 curl -X PUT http://127.0.0.1:5984/_users
-
 curl -X PUT http://127.0.0.1:5984/_replicator
-
 curl -X PUT http://127.0.0.1:5984/_global_changes
+```
