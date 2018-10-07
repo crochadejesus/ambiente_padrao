@@ -48,15 +48,15 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328
 echo "deb https://download.mono-project.com/repo/debian vs-stretch main" | sudo tee /etc/apt/sources.list.d/mono-official-vs.list
 sudo apt update
 sudo apt-get install monodevelop
-
+```
 
 Pacotes necessários para compilar Monodevelop a partir do GitHub
-
+```
 libglib2.0-cil  libglib2.0-cil-dev  libgtk2.0-cil  libgtk2.0-cil-dev  libwebkit1.1-cil  monodoc-base  monodoc-browser  monodoc-manual  monodoc-gtk3.0-manual  libgnome2.24-cil  libgnome2.0-cil-dev  libart2.0-cil  libart2.0-cil-dev  libgconf2.0-cil  libgnome-vfs2.0-cil  libgnome-vfs2.0-cil-dev  libgnome2.0-cil-dev  libgnome2.24-cil  libgconf2.0-cil-dev  libgcrypt20-dev  libgpg-error-dev  libssh2-1-dev  libnuget-core-cil  nuget
-
+```
 Install de referenceassemblies-pcl
 http://download.mono-project.com/repo/debian/pool/main/r/referenceassemblies-pcl/
-
+```
 $ sudo apt-get install gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev fsharp cmake -y
 $ cd ~/Workspace/fontes/dotnet
 $ git clone https://github.com/mono/monodevelop.git
@@ -81,11 +81,9 @@ sudo apt-get install -y nodejs
 
 ## LibreOffice
 ### Remover LibreOffice padrão
-```
 Baixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
-Baixar o torrent que é mais rápido, usar a extensão Torrent Tornado do Firefox.
+Baixar o torrent que é mais rápido.
 Tanto o main installer quanto a interface translated português (Brasil).
-
 ```
 $ cd ~/Downloads
 $ tar xvzf LibreOffice_6.1.2_Linux_x86-64_deb.tar.gz
@@ -103,13 +101,14 @@ Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instal
 
 
 ## CouchDB
-```
-2.1. Installation on Unix-like systems
+
+#2.1. Installation on Unix-like systems
 This manual can acessed by http://docs.couchdb.org/en/latest/install/unix.html#installation-from-source
 Download the fonts in: http://mirrors.up.pt/pub/apache/couchdb/source/2.2.0/apache-couchdb-2.2.0.tar.gz
 
-2.1.2. Dependencies
+#2.1.2. Dependencies
 You should have the following installed:
+```
 Erlang OTP (>=R61B03, =<19.x)
 ICU
 OpenSSL
@@ -120,22 +119,25 @@ libcurl
 help2man
 Python (>=2.7) for docs
 Python Sphinx (>=1.1.3)
+```
 It is recommended that you install Erlang OTP R16B03-1 or above where possible. You will only need libcurl if you plan to run the JavaScript test suite. And help2man is only need if you plan on installing the CouchDB man pages. Python and Sphinx are only required for building the online documentation. Documentation build can be disabled by adding the --disable-docs flag to the configure script.
 
 Debian-based Systems
 You can install the dependencies by running:
+```
 sudo apt-get --no-install-recommends -y install \
     build-essential pkg-config erlang \
     libicu-dev libmozjs185-dev libcurl4-openssl-dev
-
+```
 Be sure to update the version numbers to match your system’s available packages.
 
-2.1.4. Installing
+#2.1.4. Installing
 Once you have satisfied the dependencies you should run:
+```
 tar xvzf apache-couchdb-2.2.0.tar.gz
 cd apache-couchdb-2.2.0/
 ./configure
-
+```
 If you wish to customize the installation, pass --help to this script.
 If everything was successful you should see the following message:
 ```
@@ -144,8 +146,9 @@ You have configured Apache CouchDB, time to relax. Relax.
 ```
 
 To build CouchDB you should run:
+```
 make release
-
+```
 Try gmake if make is giving you any problems.
 If everything was successful you should see the following message:
 ```
@@ -154,7 +157,7 @@ You can now copy the rel/couchdb directory anywhere on your system.
 Start CouchDB with ./bin/couchdb from within that directory.
 ```
 
-2.1.5. User Registration and Security
+#2.1.5. User Registration and Security
 You should create a special couchdb user for CouchDB.
 On many Unix-like systems you can run:
 adduser --system \
