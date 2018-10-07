@@ -82,9 +82,116 @@ $ sudo make install
 
 ## NodeJS
 For Node.js 10:
+Download the source code of current version from official web site https://nodejs.org/en/download/current/
 ```
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
+tar xvzf node-v10.11.0.tar.gz
+cd node-v10.11.0/
+```
+## Building on supported platforms
+
+*Note:* All prerequisites can be easily installed by following
+[this bootstrapping guide](https://github.com/nodejs/node/blob/master/tools/bootstrap/README.md).
+
+#### Prerequisites
+
+* `gcc` and `g++` 4.9.4 or newer, or
+* `clang` and `clang++` 3.4.2 or newer (macOS: latest Xcode Command Line Tools)
+* Python 2.6 or 2.7
+* GNU Make 3.81 or newer
+
+#### Building Node.js
+
+To build Node.js:
+
+```console
+$ ./configure
+$ make -j4
+```
+Note that the above requires that `python` resolve to Python 2.6 or 2.7
+and not a newer version.
+
+#### Running Tests
+
+To verify the build:
+
+```console
+$ make test-only
+```
+
+At this point, you are ready to make code changes and re-run the tests.
+
+If you are running tests prior to submitting a Pull Request, the recommended
+command is:
+
+```console
+$ make -j4 test
+```
+
+`make -j4 test` does a full check on the codebase, including running linters and
+documentation tests.
+
+Optionally, continue below.
+
+To run the tests and generate code coverage reports:
+
+```console
+$ ./configure --coverage
+$ make coverage
+```
+
+This will generate coverage reports for both JavaScript and C++ tests (if you
+only want to run the JavaScript tests then you do not need to run the first
+command `./configure --coverage`).
+
+The `make coverage` command downloads some tools to the project root directory
+and overwrites the `lib/` directory. To clean up after generating the coverage
+reports:
+
+```console
+$ make coverage-clean
+```
+
+#### Building the documentation
+
+To build the documentation:
+
+This will build Node.js first (if necessary) and then use it to build the docs:
+
+```console
+$ make doc
+```
+
+If you have an existing Node.js build, you can build just the docs with:
+
+```console
+$ NODE=/path/to/node make doc-only
+```
+
+To read the documentation:
+
+```console
+$ man doc/node.1
+```
+
+If you prefer to read the documentation in a browser,
+run the following after `make doc` is finished:
+
+```console
+$ make docopen
+```
+
+This will open a browser with the documentation.
+
+To test if Node.js was built correctly:
+
+```console
+$ ./node -e "console.log('Hello from Node.js ' + process.version)"
+```
+
+To install this version of Node.js into a system directory:
+
+```console
+$ [sudo] make install
 ```
 
 # LibreOffice
