@@ -1,4 +1,4 @@
-# Set default environment
+# Set default Debian environment
 
 ## Source.list
 ```
@@ -20,7 +20,7 @@ deb-src http://deb.debian.org/debian/ stretch-backports main contrib non-free
 
 ```
 
-## Configuração padrão de um Debian
+## Install the necessary packages
 ```
 $ sudo apt-get install apt-transport-https dirmngr curl msmtp-mta evince evince-common geany-common \
 geany-plugin-addons geany-plugin-autoclose geany-plugin-automark geany-plugin-codenav \
@@ -30,6 +30,13 @@ geany-plugins geany-plugins-common dia dia-common dia-gnome dia-libs dia-rib-net
 git git-man git-all git-completion git-review kdiff3 flatpak openshot blender inkscape flowblade \
 liberror-perl patch rsync pkg-config erlang libicu-dev libmozjs185-dev libcurl4-openssl-dev libuv1 \
 make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer -y
+```
+After install the package apt-transport-https, change the address into file /etc/apt/sources.list from http to https in follow lines:
+```
+deb https://deb.debian.org/debian/ stretch main non-free contrib
+deb https://deb.debian.org/security/ stretch/updates main contrib non-free
+deb https://deb.debian.org/debian/ stretch-updates main contrib non-free
+deb https://deb.debian.org/debian/ stretch-backports main contrib non-free
 ```
 
 ## Mono
@@ -52,11 +59,11 @@ sudo apt update
 sudo apt-get install monodevelop
 ```
 
-Pacotes necessários para compilar Monodevelop a partir do GitHub
+Necessary packages to compile Monodevelop through GitHub
 ```
 libglib2.0-cil  libglib2.0-cil-dev  libgtk2.0-cil  libgtk2.0-cil-dev  libwebkit1.1-cil  monodoc-base  monodoc-browser  monodoc-manual  monodoc-gtk3.0-manual  libgnome2.24-cil  libgnome2.0-cil-dev  libart2.0-cil  libart2.0-cil-dev  libgconf2.0-cil  libgnome-vfs2.0-cil  libgnome-vfs2.0-cil-dev  libgnome2.0-cil-dev  libgnome2.24-cil  libgconf2.0-cil-dev  libgcrypt20-dev  libgpg-error-dev  libssh2-1-dev  libnuget-core-cil  nuget
 ```
-Install de referenceassemblies-pcl
+Install referenceassemblies-pcl
 http://download.mono-project.com/repo/debian/pool/main/r/referenceassemblies-pcl/
 ```
 $ sudo apt-get install gtk-sharp2 gtk-sharp2-examples gnome-sharp2 libssh2-1-dev fsharp cmake -y
@@ -74,18 +81,16 @@ $ sudo make install
 ```
 
 ## NodeJS
-```
 For Node.js 10:
-
+```
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
 # LibreOffice
-### Remover LibreOffice padrão
-Baixar última versão do LibreOffice do site oficial https://www.libreoffice.org/.
-Baixar o torrent que é mais rápido.
-Tanto o main installer quanto a interface translated português (Brasil).
+In the used version of Gnome 3.22 is don't possible remove the installed version of LibreOffice, because Gnome depends it.
+Download the last version of LibreOffice by official web site https://www.libreoffice.org/.
+Download by torrent it is more fast.
 ```
 $ cd ~/Downloads
 $ tar xvzf LibreOffice_6.1.2_Linux_x86-64_deb.tar.gz
@@ -94,12 +99,12 @@ $ sudo dpkg -i *
 ```
 
 ## Java
-Acessar o site http://www.oracle.com/technetwork/java/javase/downloads/ para abaixar uma versão do JRE.
+Download the last version by official web site http://www.oracle.com/technetwork/java/javase/downloads/
 ```
 $ cd ~/Downloads/
 $ sudo dpkg -i jdk-11_linux-x64_bin.deb
 ```
-Segundo o tutorial do [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instalacao-do-Java-da-Oracle-em-distros-Debian-like/)
+See more information in this tutorial [Viva o Linux](https://www.vivaolinux.com.br/artigo/Instalacao-do-Java-da-Oracle-em-distros-Debian-like/)
 
 
 ## CouchDB
