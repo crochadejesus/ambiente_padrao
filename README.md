@@ -29,7 +29,7 @@ geany-plugin-insertnum geany-plugin-macro geany-plugin-markdown libgconf-2-4 apt
 geany-plugins geany-plugins-common dia dia-common dia-gnome dia-libs dia-rib-network dia-shapes dia2code \
 git git-man git-all git-completion git-review kdiff3 flatpak openshot blender inkscape flowblade \
 liberror-perl patch rsync pkg-config erlang libicu-dev libmozjs185-dev libcurl4-openssl-dev libuv1 \
-make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer -y
+make gcc autoconf libtool automake build-essential fakeroot curl ttf-mscorefonts-installer lsb -y
 ```
 After install the package apt-transport-https, change the address into file /etc/apt/sources.list from http to https in follow lines:
 ```
